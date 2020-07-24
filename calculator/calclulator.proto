@@ -1,0 +1,31 @@
+syntax="proto3";
+package calculator;
+option java_package="com.proto.calculator";
+option java_multiple_files = true;
+option go_package = "calculatorpb";
+
+message SumRequest {
+    int32 first_number = 1;
+    int32 second_number = 2;
+}
+
+message SumResponse {
+    int32 result = 1;
+}
+
+message squareRootRequest {
+    int32 number=1;
+}
+
+message squareRootResponse {
+    double square_root = 1;
+}
+
+service CalculatorService {
+    // rpc sum(SumRequest) returns(SumResponse) {};
+    //thows error
+    rpc squareRoot(squareRootRequest) returns(squareRootResponse) {};
+}
+
+
+
