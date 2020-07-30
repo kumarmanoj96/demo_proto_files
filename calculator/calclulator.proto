@@ -23,8 +23,7 @@ message squareRootResponse {
 
 service CalculatorService {
     // rpc sum(SumRequest) returns(SumResponse) {};
-    //thows error
-    rpc squareRoot(squareRootRequest) returns(squareRootResponse) {};
+    rpc squareRoot(squareRootRequest) returns(squareRootResponse) {};//thows error : INVALID ARGUMENT
 }
 
 
